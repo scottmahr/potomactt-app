@@ -1,0 +1,23 @@
+<ion-view view-title="Standings">
+    <ion-content class="seasonPage" >
+        <ion-list>
+          <ion-item class="item-avatar item-icon-right" ng-repeat="team in s.teams| filter:{ leagueID: s.currentLeague } | orderBy:s.getWins" type="item-text-wrap"  href="#/tab/feeds/{{team.name}}">
+            <img class="feedImg" ng-src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-md.png">
+            <h2>{{team.name|titlecase}}</h2> 
+            <p>
+                Record: {{s.getRecordStr(team._id)}} <br>
+                Games Won: {{team.gamesWon}}, Games Lost: {{team.gamesLost}} <br>
+                Rating: {{team.rating|int}}, SoS: {{team.sOfs|int}} <br>
+            </p>
+            
+          </ion-item>
+        </ion-list>
+
+
+    
+    </ion-content>
+    <button class="fab button icon ion-plus-circled positive"></button>
+</ion-view>
+
+
+

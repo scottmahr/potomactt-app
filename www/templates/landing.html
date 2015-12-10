@@ -1,0 +1,10 @@
+<ion-view view-title="Leagues">
+  <ion-content class="landingPage" scroll="false">
+
+  <h2>These are our leagues</h2>
+
+   <div class='userList' ng-repeat="league in s.leagues" on-tap="setleague(league)">{{league.name|titlecase}}</div>
+
+
+  </ion-content>
+</ion-view>

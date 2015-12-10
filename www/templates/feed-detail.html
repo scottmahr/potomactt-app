@@ -1,0 +1,27 @@
+<!--
+  This template loads for the 'tab.friend-detail' state (app.js)
+  'friend' is a $scope variable created in the FriendsCtrl controller (controllers.js)
+  The FriendsCtrl pulls data from the Friends service (service.js)
+  The Friends service returns an array of friend data
+-->
+<ion-view view-title="{{name|titlecase}}">
+  <ion-content class="padding">
+      <ion-list>
+        <ion-item class="" on-tap="s.pickGame(game)" ng-repeat="game in s.getGames(s.getPlayerID(name))" type="item-text-wrap" >
+          
+        <h2 ng-show="game.cPlayer==0"><b>{{s.getPlayerName(game.player1)+' ('+game.scores[game.scores.length-1][0]+')'|titlecase}}</b> - 
+              {{s.getPlayerName(game.player2)+' ('+game.scores[game.scores.length-1][1]+')'|titlecase}}</h2> 
+
+          <h2 ng-show="game.cPlayer==1">{{s.getPlayerName(game.player1)+' ('+game.scores[game.scores.length-1][0]+')'|titlecase}} - 
+            <b>{{s.getPlayerName(game.player2)+' ('+game.scores[game.scores.length-1][1]+')'|titlecase}}</b></h2> 
+
+          <p>
+            Date: {{game.datePlayed|dt}}<br>
+            Rating Change: <span ng-class="{'green':game.ratingChange[game.cPlayer]>0,'red':game.ratingChange[game.cPlayer]<0}">{{game.ratingChange[game.cPlayer]|int}}</span>
+           </p>
+          
+        </ion-item>
+      </ion-list>
+  </ion-content>
+</ion-view>
+

@@ -1,0 +1,29 @@
+<ion-view view-title="Travel Wod Club Scanner">
+  <ion-content class="scanPage">
+
+    <span ng-if="!s.selectedBox">
+        <div class="list card">
+            Normally, Facebook login would automatically log you in as a user. Once it knew who you were, it would check all of the 
+            member locations to see if you were an administrator if any of them. If you were, it would expose this set of tabs to you for your location. 
+            In development it is nice to be able to select different boxes. You should choose a box:<br>
+            <div class='userList' ng-repeat="box in s.boxes | orderBy:'logoID'" on-tap="setBox(box)">{{box.name|titlecase}}</div>
+        </div>
+    </span>
+
+    <span ng-if="s.selectedBox">
+        <div class="list card">
+            <div class="item item-body">
+              Dear {{s.selectedBox.name|titlecase}},<br><br>This is where you scan people to confirm they have dropped in to your class. <br><br>-Kyle<br><br>
+
+              <button class="button button-positive" on-tap="scan()"> Scan barcode now!</button>
+              <br><br>
+              <span ng-show="!!s.scannedUser">Successfully scanned passport of <b>{{s.scannedUser.name|titlecase}}</b>.</span>
+            </div>
+        </div>
+       
+    </span>
+
+
+
+  </ion-content>
+</ion-view>

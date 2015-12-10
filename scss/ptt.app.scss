@@ -1,0 +1,201 @@
+
+
+.fab{
+    border: none;
+    position: fixed;
+    right: 15px;
+    bottom: 60px;
+    padding: 0;
+    background-color: white;
+}
+.button.fab:before{
+  font-size: 50px;
+}
+.fab:hover{
+    color: #387ef5;
+}
+
+
+.seasonPage{
+
+}
+
+.landingPage{
+    .userList{
+        padding: 25px;
+        margin: 5px;
+        border: 1px solid #333;
+        display: inline-block;
+    }
+}
+
+.green{
+    color:green;
+}
+.red{
+    color:red;
+}
+
+.gamePage{
+    
+    width: 100%;
+    height: 100%;
+    
+    .players{
+        width: 100%;
+
+        .player{
+            width:50%;
+            float:left;
+            //border: 2px solid blue;
+            text-align: center;
+        }
+
+        .profilePic{
+            width: 80%;
+            border-radius: 50%;
+      
+        }
+    }
+
+    .scorePlot{
+        width: 100%;
+        height: 150px;
+    }
+
+    .gameOptions{
+        position: absolute;
+        bottom: 150px;
+        width: 100%;
+
+        .button{
+            display: inline-block;
+            width: 49%;
+        }
+    }
+
+    .pointButtons{
+        position: absolute;
+        bottom: 100px;
+        width: 100%;
+
+        .button{
+            display: inline-block;
+            width: 49%;
+        }
+    }
+
+
+
+
+}    
+
+.directoryPage{
+    >.scroll{
+        width: 100%;
+        height: 100%;
+    }
+    #map {
+        width: 100%;
+        height: 100%;
+    }
+    .drawer{
+        position: fixed;
+        right: -90%;
+        top: 0;
+        height: 100%;
+        width: 90%;
+        background-color: white;
+        border: 1px solid #000;
+
+        transition: 1s;
+        padding: 10px;
+    }
+
+    .showDrawer{
+        transition: 1s;
+        right:0;
+    }
+
+    
+}
+
+.userList{
+    padding: 25px;
+    margin: 5px;
+    border: 1px solid #333;
+    display: inline-block;
+    
+}
+
+
+.bar-dark .button{
+    font-size: 20px;
+    margin: 2px;
+}
+
+
+
+.editPage{
+    img{
+        max-width:350px;
+        max-height:200px;
+    }
+
+
+
+
+
+
+
+}
+
+
+
+
+.feedStars{
+    position: absolute;
+    right: 12px;
+    top: 12px;
+}
+
+.feedImg{
+    left: 6px !important;
+    max-width: 60px !important;
+    max-height: 60px !important;
+}
+
+
+
+
+
+.popup {
+    width: 350px !important;
+    height: 300px !important;
+
+
+}
+
+
+
+.yaxis path,
+.yaxis line {
+    stroke: #bdbdbd;
+    fill: none;
+    stroke-width: 2px;
+    shape-rendering: crispEdges;
+}
+
+
+
+.xaxis path,
+.xaxis line {
+    stroke: #bdbdbd;
+    fill: none;
+    shape-rendering: crispEdges;
+    stroke-width: 2px;
+
+
+}
+
+

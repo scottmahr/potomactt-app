@@ -1,0 +1,44 @@
+<ion-view view-title="Leagues - Game" cache-view="false">
+  <ion-content class="gamePage" scroll="false">
+
+  <div class="players">
+    <div class="player"    style="background-color: #64d996;">
+        <img class="profilePic" ng-src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-md.png">
+        <h2>{{s.getPlayerName(m.game.player1)|titlecase}}</h2>
+        <h2>{{m.game.scores[m.game.scores.length-1][0]}}</h2>
+    </div>
+    
+    <div class="player"  style="background-color: #4fc5e3;">
+        <img class="profilePic" ng-src="http://www.clker.com/cliparts/A/Y/O/m/o/N/placeholder-md.png">
+        <h2>{{s.getPlayerName(m.game.player2)|titlecase}}</h2>
+        <h2>{{m.game.scores[m.game.scores.length-1][1]}}</h2>
+    </div>
+  </div>
+
+
+  <div scoreplot class="scorePlot"></div>
+
+
+  <div class="gameOptions">
+    <button class="button button-positive" on-tap="deleteGame()">
+        Delete
+    </button>
+    <button class="button button-positive" on-tap="toggleTable()">
+       {{m.game.properties.location|titlecase}}
+    </button>
+  </div>
+
+
+  <div class="pointButtons">
+    <button on-tap="addPoint(0)" class="button button-positive">
+        {{s.getPlayerName(m.game.player1)|first|titlecase}} Point
+    </button>
+    <button on-tap="addPoint(1)" class="button button-positive">
+      {{s.getPlayerName(m.game.player2)|first|titlecase}} Point
+    </button>
+  </div>
+
+
+
+  </ion-content>
+</ion-view>

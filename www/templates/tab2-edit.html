@@ -1,0 +1,43 @@
+<ion-view view-title="Edit Location Details">
+  <ion-content class="editPage padding" >
+   
+   <img ng-show="!!s.selectedBox.logoID" ng-src="http://travelwodclub.herokuapp.com/api/logo?id={{s.selectedBox.logoID}}">
+   <h3>{{s.selectedBox.name}}</h3>
+   
+   <p>
+
+  
+        <b>Name: </b> {{s.selectedBox.name}}<br>
+
+        <b>Contact Info: </b> {{s.selectedBox.contactInfo.name}} - {{s.selectedBox.contactInfo.phone}}<br>
+
+        <b>Address: </b> {{s.selectedBox.address.street}}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{s.selectedBox.address.city}},{{s.selectedBox.address.state}}, {{s.selectedBox.address.postalCode}}<br>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;{{s.selectedBox.address.country}}<br>
+        <b>Email: </b> {{s.selectedBox.email}}<br>
+        <b>Website: </b> {{s.selectedBox.website}}<br>
+
+        <b>Latitude: </b> {{s.selectedBox.latitude}}<br>
+        <b>Longitude: </b> {{s.selectedBox.longitude}}<br>
+        <b>YelpLink: </b> {{s.selectedBox.yelpLink}}<br>
+        <b>DropInRate: </b> {{s.selectedBox.dropInRate}}<br>
+        <b>DropInOffer: </b> {{s.selectedBox.dropInOffer}}<br>
+        <b>DropInPolicy: </b> {{s.selectedBox.dropInPolicy}}<br>
+        <b>Hours: </b> <p ng-bind-html="s.selectedBox.hours"></p>
+
+   </p>
+
+   <button class="button button-calm" on-tap="chooseAnotherBox()"> Choose Another Box</button>
+   
+
+<br><br><br>
+  <button class="button button-assertive" on-tap="deleteSelectedBox()"> Delete Box</button>
+  <button class="button button-assertive" on-tap="uploadBoxes()"> Upload</button>
+    <button class="button button-assertive" on-tap="clearDropins()"> Clear All Dropins</button>
+
+
+
+
+
+  </ion-content>
+</ion-view>

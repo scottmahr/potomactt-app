@@ -1,0 +1,11 @@
+<ion-view view-title="Travel Wod Club Feed">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="dropIn in s.boxFeed(s.selectedBox._id) | orderBy:'-date'" type="item-text-wrap">
+        <img class="feedImg" ng-src="http://travelwodclub.herokuapp.com/api/logo?id={{s.userPic(dropIn.userID)}}">
+        <h2>{{s.userName(dropIn.userID)|titlecase}}</h2>
+        <div ng-show="dropIn.rating" stars edit="false" filled="{{dropIn.rating}}" w="100" h="20"class="feedStars"></div>
+        <p> {{s.rndVerb($index)}} {{s.boxName(dropIn.boxID)}} <br> on {{dropIn.date}}.</p>
+      </ion-item>
+  </ion-content>
+</ion-view>
